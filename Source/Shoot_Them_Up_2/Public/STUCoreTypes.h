@@ -72,7 +72,7 @@ struct FDecalData
 	FVector Size = FVector(10.0f);
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "VFX")
-	float LifeTime = 5.0f; 
+	float LifeTime = 5.0f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "VFX")
 	float FadeOutTime = 0.7f;
@@ -98,18 +98,22 @@ struct FGameData
 	GENERATED_USTRUCT_BODY()
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "1", ClampMax = "100"))
-	int PlayersNum = 2;
+	int32 PlayersNum = 2;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "1", ClampMax = "10"))
-	int RoundsNum = 4;
+	int32 RoundsNum = 4;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "1", ClampMax = "300"))
-	int RoundTime = 10; //in second
+	int32 RoundTime = 10; //in second
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	FLinearColor DefaultTeamColor = FLinearColor::Red;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	TArray<FLinearColor> TeamColor;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "3", ClampMax = "20"))
+	int32 RespawnTime = 5; //in second
+	
 	
 };
