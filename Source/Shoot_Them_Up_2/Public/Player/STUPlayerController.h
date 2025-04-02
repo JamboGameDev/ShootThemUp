@@ -19,5 +19,4 @@ public:
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 	USTURespawnComponent* RespawnComponent;
-	
 };
