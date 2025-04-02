@@ -58,5 +58,7 @@ private:
 	void LogPlayerInfo();
 
 	void StartRespan(AController* Controller);
+
+	void GameOver();
 	
 };
